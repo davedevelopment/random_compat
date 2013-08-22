@@ -2,6 +2,13 @@
 
 namespace PHP;
 
+class SecureRandom extends Random {
+    public function __construct()
+    {
+        parent::__construct(true);
+    }
+}
+
 class Random {
 
     const BLOCK_SIZE = 32;
